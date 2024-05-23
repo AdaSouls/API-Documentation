@@ -1,0 +1,25 @@
+meta {
+  name: Add User Collection
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:4000/api/v1/collection/add/1?code={{LOCALHOST_CODE_MASTER}}
+  body: json
+  auth: none
+}
+
+query {
+  code: {{LOCALHOST_CODE_MASTER}}
+}
+
+body:json {
+  {
+    "name": "TEST",
+    "smartContract": "addr1543543454343",
+    "policy": {
+      "test": "policy de prueba"
+    }
+  }
+}
