@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: http://localhost:4000/api/v1/collection/add/stake_test1up9vf9nr6paguj2cvhkq9kmdfyzvldn0uf3tarzmq8c0uysu2damr?code={{LOCALHOST_CODE_MASTER}}
+  url: {{BASE_URL}}/api/v1/collection/add/{{STAKE_ADDRESS}}?code={{CODE_MASTER}}
   body: json
   auth: none
 }
 
 query {
-  code: {{LOCALHOST_CODE_MASTER}}
+  code: {{CODE_MASTER}}
 }
 
 body:json {

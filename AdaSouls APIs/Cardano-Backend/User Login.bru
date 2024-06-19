@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: http://localhost:4000/api/v1/user/login?code={{LOCALHOST_CODE_MASTER}}
+  url: {{BASE_URL}}/api/v1/user/login?code={{CODE_MASTER}}
   body: json
   auth: none
 }
 
 query {
-  code: {{LOCALHOST_CODE_MASTER}}
+  code: {{CODE_MASTER}}
 }
 
 body:json {
