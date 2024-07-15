@@ -1,0 +1,15 @@
+meta {
+  name: Get Collections
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/users/{{STAKE_ADDRESS}}/collections?code={{CODE_MASTER}}
+  body: none
+  auth: none
+}
+
+params:query {
+  code: {{CODE_MASTER}}
+}

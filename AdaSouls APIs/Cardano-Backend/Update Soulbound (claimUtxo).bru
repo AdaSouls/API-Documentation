@@ -1,0 +1,31 @@
+meta {
+  name: Update Soulbound (claimUtxo)
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{BASE_URL}}/collections/{{COLLECTION_ID}}/soulbounds/{{SOULBOUND_ID}}?code={{CODE_MASTER}}
+  body: json
+  auth: none
+}
+
+params:query {
+  code: {{CODE_MASTER}}
+}
+
+body:json {
+  {
+    "claimUtxo": {
+      "txCbor": "cbor...",
+      "address": "addr_test1wq5y2pmwmc6v436yde8rvdm3fvu6fh7vt7g4fysnl44t5mc4nu672",
+      "txHash": "1d44959f5f40a4b3f534be4c110a03c093ad4553957cbd49389882c3816f8c48",
+      "outputIndex": 0,
+      "assets": {
+        "lovelace": 1866230,
+        "37cfb0e00d84c3ab96243cb0ad4cf1a97da167388d49117558e252d2416c6465616e6f23303032": 1
+      },
+      "datum": "d8799f5820997c1ea1bebddb36de3ac1b12479b7174b9f5e768e180f870fe2dea038dd408f581c9d4d78c412018bac8d6e6fd2bf8880cfc273d7af2e772290e1c02f1046497373756564d8799fa158383337636662306530306438346333616239363234336362306164346366316139376461313637333838643439313137353538653235326432a14b416c6465616e6f23303032a2446e616d654b416c6465616e6f2330303243666f6f4362617201d87a80ffff"
+    }
+  }
+}

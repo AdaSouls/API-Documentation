@@ -1,0 +1,21 @@
+meta {
+  name: Update Soulbound (burnTx)
+  type: http
+  seq: 9
+}
+
+patch {
+  url: {{BASE_URL}}/collections/{{COLLECTION_ID}}/soulbounds/{{SOULBOUND_ID}}?code={{CODE_MASTER}}
+  body: json
+  auth: none
+}
+
+params:query {
+  code: {{CODE_MASTER}}
+}
+
+body:json {
+  {
+    "burnTx": "cbor..."
+  }
+}

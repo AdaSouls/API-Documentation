@@ -1,16 +1,16 @@
 meta {
   name: User Login
   type: http
-  seq: 6
+  seq: 12
 }
 
 post {
-  url: {{BASE_URL}}/api/v1/user/login?code={{CODE_MASTER}}
+  url: {{BASE_URL}}/user/login?code={{CODE_MASTER}}
   body: json
   auth: none
 }
 
-query {
+params:query {
   code: {{CODE_MASTER}}
 }
 
