@@ -1,15 +1,21 @@
 meta {
   name: Sign Collection
   type: http
-  seq: 4
+  seq: 11
 }
 
 post {
-  url: {{BASE_URL}}/api/v1/collection/sign/{{COLLECTION_ID}}/stake_test1up9vf9nr6paguj2cvhkq9kmdfyzvldn0uf3tarzmq8c0uysu2wyuh?code={{CODE_MASTER}}
-  body: none
+  url: {{BASE_URL}}/collections/{{COLLECTION_ID}}/user/{{STAKE_ADDRESS}}/sign?code={{CODE_MASTER}}
+  body: json
   auth: none
 }
 
-query {
+params:query {
   code: {{CODE_MASTER}}
+}
+
+body:json {
+  {
+    "signature": "1234567890"
+  }
 }
