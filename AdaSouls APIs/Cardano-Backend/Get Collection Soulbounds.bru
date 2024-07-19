@@ -1,0 +1,34 @@
+meta {
+  name: Get Collection Soulbounds
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BASE_URL}}/collections/{{COLLECTION_ID}}/soulbounds?code={{CODE_MASTER}}
+  body: none
+  auth: none
+}
+
+params:query {
+  code: {{CODE_MASTER}}
+}
+
+body:json {
+  {
+    "name": "Souldbound#001",
+    "beneficiary": "addr_test1qzw567xyzgqchtyddeha90ugsr8uyu7h4uh8wg5su8qz7yykq2ndwcmedv72l7263vj96tl6cyn74l2mw5kp8h7fk8rq66qtae",
+    "metadata": {
+      "foo": "bar"
+    },
+    "signers": [
+      {
+        "stake": "stake_test1uztq9fkhvdukk090l9dgkfza9lavzfl2l4dh2tqnmlymr3syessdt",
+        "signature": "912821321320811238"
+      }
+    ],
+    "mintUtxo": {
+      "txCbor": "cbor..."
+    }
+  }
+}

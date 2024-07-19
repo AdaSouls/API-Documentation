@@ -1,11 +1,11 @@
 meta {
-  name: Get Soulbounds
+  name: Get Claimable Soulbounds
   type: http
-  seq: 4
+  seq: 13
 }
 
 get {
-  url: {{BASE_URL}}/collections/{{COLLECTION_ID}}/soulbounds?code={{CODE_MASTER}}
+  url: {{BASE_URL}}/users/{{INVITED_STAKE_ADDRESS}}/soulbounds/claimable?code={{CODE_MASTER}}
   body: none
   auth: none
 }
