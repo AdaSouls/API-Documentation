@@ -1,11 +1,11 @@
 meta {
   name: User Login
   type: http
-  seq: 12
+  seq: 1
 }
 
 post {
-  url: {{BASE_URL}}/user/login?code={{CODE_MASTER}}
+  url: {{BASE_URL}}/users/login?code={{CODE_MASTER}}
   body: json
   auth: none
 }
